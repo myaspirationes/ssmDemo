@@ -21,7 +21,7 @@
   <!-- 指定spring核心配置文件 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:applicationContext.xml</param-value>
+    <param-value>classpath*:applicationContext.xml</param-value>
   </context-param>
 
   <!-- 解决乱码的过滤器 -->
@@ -54,7 +54,10 @@
     <!-- 指定配置文件位置和名称 如果不设置,默认找/WEB-INF/<servlet-name>-servlet.xml -->
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:spring-mvc.xml</param-value>
+      <param-value>classpath*:spring-mvc.xml</param-value>
+
+
+
     </init-param>
     <load-on-startup>1</load-on-startup>
     <async-supported>true</async-supported>
